@@ -7,3 +7,6 @@
 ## Finish time: 3:37
 
 ## Actual time needed to complete: 3h and 17m
+
+# My first react app
+
