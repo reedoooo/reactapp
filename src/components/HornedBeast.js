@@ -1,12 +1,15 @@
 import React from 'react';
 import { FaHeart } from "react-icons/fa";
+import { Modal, Button } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 
 class HornedBeast extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            showModal: false,
             showImage: false,
+            enlarged: false,
             liked: false,
             likes: 0,
             clicks: 0,
@@ -22,20 +25,44 @@ class HornedBeast extends React.Component {
         });
     }
 
+    handleModal = () => {
+        this.setState({
+            enlarged: true,
+            showModal: !this.state.showModal
+        })
+        console.log('second image');
+    }
+
     render() {
         return (
             <Row>
                 <div className="row section-container">
                     <div className="col-4 content-container">
-                        <div className="card card-body">
+                        <div className="photo-content card card-body">
                             <h2> {this.props.beastInfo.title} </h2>
-
                             {this.state.showImage && (
                                 <img
+                                    className="preview-image"
+                                    id={this.props.beastInfo._id}
                                     src={this.props.beastInfo.image_url}
                                     alt={this.props.beastInfo.description}
+                                    onClick={this.handleModal}
                                 />
                             )}
+                            <Modal show={this.state.showModal} onHide={this.handleModal}>
+                                <Modal.Header closeButton>
+                                    <Modal.Title>{this.props.beastInfo.title}</Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body className="modal-container" >
+                                    <img className=" col-10 card" src={this.props.beastInfo.image_url} alt={this.props.beastInfo.description} />
+                                    <p>{this.props.beastInfo.description}</p>
+                                </Modal.Body>
+                                <Modal.Footer>
+                                    <Button variant="secondary" onClick={this.handleModal}>
+                                        Close
+                                    </Button>
+                                </Modal.Footer>
+                            </Modal>
                         </div>
                         <p> {this.props.beastInfo.description}</p>
                         <div className="button-likes-container">
@@ -54,7 +81,6 @@ class HornedBeast extends React.Component {
                     </div>
                 </div>
             </Row>
-
         );
     }
 }
