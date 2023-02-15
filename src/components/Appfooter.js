@@ -4,7 +4,7 @@ class Appfooter extends React.Component {
     render() {
         return (
             <div>
-                <p>Reed Vogt</p>
+                <p>&copy; Reed Vogt</p>
             </div>
         )
     }
