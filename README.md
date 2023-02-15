@@ -4,6 +4,6 @@
 
 ## Start time: 12:30
 
-## Finish time: 3:47
+## Finish time: 3:37
 
 ## Actual time needed to complete: 3h and 17m
