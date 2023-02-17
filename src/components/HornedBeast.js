@@ -2,6 +2,8 @@ import React from 'react';
 import { FaHeart } from "react-icons/fa";
 import Row from 'react-bootstrap/Row';
 import ModalComponent from './ModalComponent';
+import Container from 'react-bootstrap/Container';
+import { Col } from 'react-bootstrap';
 
 
 class HornedBeast extends React.Component {
@@ -32,11 +34,9 @@ class HornedBeast extends React.Component {
 
     render() {
         return (
-            <Row>
-                <div>
-                </div>
-                <div className="row section-container">
-                    <div className="col-6 content-container ">
+            <Container>
+                <Row>
+                    <Col className="col-7">
                         <div className="photo-content card card-body">
                             <h2>{this.props.beastInfo.title}</h2>
                             <img
@@ -73,9 +73,10 @@ class HornedBeast extends React.Component {
                                 <button onClick={this.handleLike} className="btn btn-primary w-100 mb-3" type="button">{this.props.beastInfo.title}</button>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </Row>
+                    </Col>
+                </Row>
+            </Container>
+
         );
     }
 }
