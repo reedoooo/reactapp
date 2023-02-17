@@ -48,13 +48,14 @@
 }
 
 .col .container{
-    float: right;
     justify-content: center;
     /* width: 80%; */
     padding:0;
 }
 
-
+.Beast-choices {
+  justify-content: center;
+}
 
 .row {
   justify-content: center;
@@ -62,10 +63,6 @@
   margin:0;
 }
 
-.Beast-choices {
-    justify-content: center;
-    float: right;
-}
 
 .App-logo {
   height: 40vmin;
@@ -74,6 +71,8 @@
 
 .App-header {
   background-color: #282c34;
+  float: right;
+  width: 80%;
   min-height: 20vh;
   display: flex;
   flex-direction: column;
@@ -124,6 +123,7 @@ ul li a img {
 }
 
 .sidebar ul li {
+  font-size: 2.5rem;
   padding: 15px;
 }
 
