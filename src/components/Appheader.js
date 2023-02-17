@@ -1,11 +1,17 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import { FaCamera } from "react-icons/fa";
 
 class Appheader extends React.Component {
     render() {
         return (
-            <div>
-                <h1>Choose Horned Beast</h1>
-            </div>
+            <Container>
+                <Row>
+                    <Col><FaCamera /> <h1>Hornstagram</h1></Col>
+                </Row>
+            </Container>
         )
     }
 }

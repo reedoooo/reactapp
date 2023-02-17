@@ -1,6 +1,4 @@
-body {
-
-}
+body {}
 
 button {
   margin: 1rem;
@@ -9,34 +7,34 @@ button {
 }
 
 .section-container {
-  margin:10px;
+  display:flex;
+  margin: 10px;
   justify-content: center;
+}
+
+.search-container {
+  margin:10px;
+  padding: 10px;
 }
 
 .content-container {
   align-items: center;
-  height:auto;
+  height: auto;
   max-width: 70%;
 }
 
-.modal-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 .modal-image {
-
+    margin: auto;
 }
 
 .photo-content {
   justify-content: center;
 }
-.button-likes-container {
-  display:flex;
-  justify-content: space-around;
 
-    justify-content: center;
+.button-likes-container {
+  display: flex;
+  justify-content: space-around;
+  justify-content: center;
 }
 
 .button-likes {
@@ -48,9 +46,9 @@ button {
 }
 
 .button-likes p {
-    align-content: center;
-    padding-right:1px;
-    margin: auto;
+  align-content: center;
+  padding-right: 1px;
+  margin: auto;
 }
 
 .button-likes svg {
@@ -61,9 +59,9 @@ button {
 .heart-likes {
   display: flex;
   width: 10%;
-    justify-content: space-between;
-    align-content: center;
-      margin: auto;
+  justify-content: space-between;
+  align-content: center;
+  margin: auto;
 }
 
 .App {
@@ -78,20 +76,81 @@ button {
 
 .App-header {
   background-color: #282c34;
-  min-height: 50vh;
+  min-height: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Animate the modal zoom-out effect */
+/* .modal.fadeOut {
+  animation: zoom-out 0.3s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+}
+
+.modal.fadeIn {
+  animation: zoom-in 0.3s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+} */
+
+.modal.fadeOut {
+  animation: modalFadeOut 0.3s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+}
+
+@keyframes modalFadeOut {
+  0% {
+    background-color: white;
   }
-  to {
-    transform: rotate(360deg);
+
+  100% {
+    background-color: transparent;
+  }
+}
+
+.modal.fadeIn {
+  animation: modalFadeIn 0.3s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+}
+
+@keyframes modalFadeIn {
+  0% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: white;
+  }
+}
+
+.modal.fadeIn .modal-dialog {
+  animation: modalContentFadeIn 0.3s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+}
+
+@keyframes modalContentFadeIn {
+  0% {
+    opacity: 0;
+    top: -20px;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+.modal.fadeOut .modal-dialog {
+  animation: modalContentFadeOut 0.3s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+}
+
+@keyframes modalContentFadeOut {
+  0% {
+    opacity: 1;
+    top: 0px;
+  }
+
+  100% {
+    opacity: 0;
+    top: -20px;
   }
 }
