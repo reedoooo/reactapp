@@ -1,9 +1,9 @@
-# Number and name of feature: 2 features. A button to open the image and a button to like the image.
+# Number and name of feature: 2 features. Added the Search Bar and some CSS and cleaned up the code. 
 
 ## Estimate of time needed to complete: 4 hours
 
-## Start time: 2:11
+## Start time: 9:11pm
 
-## Finish time: 3:35
+## Finish time: 11:09pm
 
-## Actual time needed to complete: 1h and 24m
+## Actual time needed to complete: 2h and 2m
