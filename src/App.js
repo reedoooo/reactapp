@@ -4,7 +4,7 @@ import Appheader from './components/Appheader';
 import Appmain from './components/Appmain';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import style from './App.css';
+import "./App.css";
 
 
 function App() {
